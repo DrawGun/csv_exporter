@@ -1,0 +1,7 @@
+test:
+    filename: test.csv
+    filepath: tmp
+
+development:
+    filename: file.csv
+    filepath: tmp

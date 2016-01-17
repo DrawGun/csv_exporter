@@ -7,11 +7,11 @@ require "csv_exporter/version"
 Gem::Specification.new do |s|
   s.name        = "csv_exporter"
   s.version     = CsvExporter::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of CsvExporter."
-  s.description = "TODO: Description of CsvExporter."
+  s.authors     = ["DrawGun"]
+  s.email       = ["drawgunich@gmail.com"]
+  s.homepage    = "https://github.com/DrawGun/csv_exporter"
+  s.summary     = "Simple solution to export csv file."
+  s.description = "Simple solution to export csv file."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

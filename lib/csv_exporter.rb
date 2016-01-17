@@ -23,7 +23,7 @@ module CsvExporter
       file_hash = if configuration
         { path: configuration['filepath'], name: filename || configuration['filename'] }
       else
-        { path: 'tmp', name: file || 'file.csv' }
+        { path: 'tmp', name: filename || 'file.csv' }
       end
 
       File.join(root, file_hash[:path], file_hash[:name])

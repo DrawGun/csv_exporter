@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     csv_exporter (0.0.1)
-      rails (~> 4.1.14)
+      rails
 
 GEM
   remote: https://rubygems.org/

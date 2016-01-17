@@ -8,7 +8,7 @@ module CsvExporter
       CSV.open(CsvExporter.file(filename), 'w') do |csv|
 
         collection.each_with_index do |element, index|
-          # binding.pry if index == 0
+
           case element.class.to_s.downcase
           when 'hash'
             csv << element.keys if index == 0

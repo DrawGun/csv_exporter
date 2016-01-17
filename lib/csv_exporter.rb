@@ -16,22 +16,17 @@ module CsvExporter
     end
 
     def configuration
-      if defined? @environment
-        raise RuntimeError.new("not configured CsvExporter for #{@environment} enviroment") unless @configuration
-      else
-        raise RuntimeError.new('not configured CsvExporter') unless @configuration
-      end
-
       @configuration
     end
 
-    def environment
-      @environment
-    end
-
     def file(filename = nil)
-      filename ||= configuration['filename']
-      File.join(root, configuration['filepath'], filename)
+      file_hash = if configuration
+        { path: configuration['filepath'], name: filename || configuration['filename'] }
+      else
+        { path: 'tmp', name: file || 'file.csv' }
+      end
+
+      File.join(root, file_hash[:path], file_hash[:name])
     end
 
     def root
